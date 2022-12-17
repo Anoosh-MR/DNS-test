@@ -17,6 +17,21 @@ const createProd = async (req, res) => {
   }
 };
 
+const getProduct = async (req, res) => {
+  try {
+    if (req.body.catId == undefined) {
+      const products = await Products.find({});
+      res.status(200).json(products);
+      return;
+    }
+    const products = await Products.find({ catId: req.body.catId });
+    res.status(200).json(products);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
 module.exports = {
   createProd,
+  getProduct,
 };
