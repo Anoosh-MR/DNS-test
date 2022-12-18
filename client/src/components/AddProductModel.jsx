@@ -25,7 +25,7 @@ const style = {
   borderRadius: "10px",
   boxShadow: 24,
   p: 4,
-  height: 500,
+  height: 490,
 };
 
 const ITEM_HEIGHT = 48;
@@ -110,6 +110,7 @@ const AddProductModel = () => {
         console.log(res);
         handleClose();
         setfetchAgain(!fetchAgain);
+        window.location.replace("/");
       });
   };
 
@@ -126,7 +127,7 @@ const AddProductModel = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <FormControl sx={{ m: 1, width: 300, gap: "20px" }} size="small">
+          <FormControl sx={{ m: 1, width: 300, gap: "15px" }} size="small">
             <TextField
               id="Title"
               label="Title"

@@ -70,9 +70,9 @@ const AddCategoryModel = () => {
         parentId: select,
       })
       .then((data) => {
-        console.log(data);
         setfetchAgain(!fetchAgain);
         handleClose();
+        window.location.replace("/");
       });
   };
 
