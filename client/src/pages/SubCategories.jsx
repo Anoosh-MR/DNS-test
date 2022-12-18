@@ -42,6 +42,13 @@ const SubCategories = () => {
           ))}
         </Grid>
       </Box>
+      <Typography
+        variant="h6"
+        color="error"
+        sx={{ marginLeft: "5px", padding: "20px 20px 0px " }}
+      >
+        Products
+      </Typography>
       <Box
         sx={{
           display: "flex",

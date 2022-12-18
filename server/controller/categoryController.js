@@ -54,6 +54,7 @@ const getCategory = async (req, res) => {
   }
 };
 
+// to get full category
 const getFullCategory = async (req, res) => {
   try {
     category.find({}).exec((err, category) => {

@@ -16,6 +16,7 @@ const createProd = async (req, res) => {
   }
 };
 
+// two way 1,get product  from search params 2, get all products
 const getProduct = async (req, res) => {
   try {
     if (req.body.catId == undefined) {
