@@ -8,3 +8,13 @@ export const CategoryProducts = (name, product) => {
 
   return categories;
 };
+
+export const styled = (name, product) => {
+  const data = CategorynammeCount(name, product);
+  console.log(data);
+  if (data == `${name} (${0})`) {
+    return "none";
+  } else {
+    return "flex";
+  }
+};

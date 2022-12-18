@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
-import { CategorynammeCount } from "../helper/helper";
+import { CategorynammeCount, styled } from "../helper/helper";
 import { ShopState } from "../context/contextAPI";
 
 const Home = () => {
@@ -36,6 +36,7 @@ const Home = () => {
   const handleClick = (data, id, name) => {
     navigator("/categories", { state: { id, data, name, products } });
   };
+
   return (
     <>
       {products && mainCategory ? (
@@ -56,6 +57,7 @@ const Home = () => {
               {mainCategory.map((cat) => (
                 <Button
                   key={cat.name}
+                  sx={{ display: styled(cat.name, products) }}
                   size="small"
                   variant="outlined"
                   onClick={() => handleClick(cat.children, cat._id, cat.name)}

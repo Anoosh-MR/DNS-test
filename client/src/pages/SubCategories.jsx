@@ -1,7 +1,7 @@
 import { Button, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { useLocation } from "react-router-dom";
-import { CategorynammeCount, CategoryProducts } from "../helper/helper";
+import { CategorynammeCount, CategoryProducts, styled } from "../helper/helper";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import ProductCard from "../components/ProductCard";
@@ -33,6 +33,7 @@ const SubCategories = () => {
             <Button
               key={cat.name}
               size="small"
+              sx={{ display: styled(cat.name, products) }}
               variant="outlined"
               onClick={() => handleClick(cat.children, cat._id, cat.name)}
             >
