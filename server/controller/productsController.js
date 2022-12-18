@@ -1,7 +1,6 @@
 const Products = require("../model/product");
 
 const createProd = async (req, res) => {
-  //    const {name,desc,price,picture}=req.body
   try {
     const exist = await Products.find(req.body);
     if (exist.length) {
@@ -13,7 +12,7 @@ const createProd = async (req, res) => {
     const data = await newProduct.save();
     res.status(200).json(data);
   } catch (err) {
-    res.status(400).json({ error: err.message });
+    res.status(500).json({ error: err });
   }
 };
 

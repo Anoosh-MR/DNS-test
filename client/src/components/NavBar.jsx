@@ -1,6 +1,8 @@
 import React from "react";
 
 import { AppBar, Toolbar, Button } from "@mui/material";
+import AddCategoryModel from "./AddCategoryModel";
+import AddProductModel from "./AddProductModel";
 
 const NavBar = () => {
   return (
@@ -10,12 +12,8 @@ const NavBar = () => {
         sx={{ display: "flex", alignItems: "flex-end" }}
       >
         <Toolbar sx={{ gap: "10px" }}>
-          <Button variant="outlined" color="info">
-            Add Products
-          </Button>
-          <Button variant="outlined" color="secondary">
-            Add Category
-          </Button>
+          <AddProductModel />
+          <AddCategoryModel />
         </Toolbar>
       </AppBar>
     </div>

@@ -1,23 +1,21 @@
 import { Button, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
+import React from "react";
 import { useLocation } from "react-router-dom";
 import { CategorynammeCount, CategoryProducts } from "../helper/helper";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import ProductCard from "../components/ProductCard";
 
-const SubCategories = () => {
-  const [newProduct, setNewProduct] = useState();
+const SubsubCategories = () => {
   const location = useLocation();
-  const navigator = useNavigate();
   const { id, data, name, products } = location.state;
+  const navigator = useNavigate();
 
   const handleClick = (data, id, name) => {
-    navigator("/categories/subCategory", {
+    navigator("/categories/subCategory/products", {
       state: { id, data, name, products },
     });
   };
-
   return (
     <Box>
       <Box>
@@ -47,7 +45,6 @@ const SubCategories = () => {
           flexDirection: "row",
           padding: "20px",
           gap: "20px",
-          marginTop: "20px",
           flexWrap: "wrap",
         }}
       >
@@ -59,4 +56,4 @@ const SubCategories = () => {
   );
 };
 
-export default SubCategories;
+export default SubsubCategories;
