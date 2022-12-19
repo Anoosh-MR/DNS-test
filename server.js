@@ -27,7 +27,7 @@ app.get("*", function (_, res) {
   );
 });
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, (req, res) => {
   console.log(`server started on port ${PORT}`);
 });
