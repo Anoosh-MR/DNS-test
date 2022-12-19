@@ -77,7 +77,7 @@ const AddProductModel = () => {
 
   const getFullCategory = () => {
     axios
-      .get("http://localhost:5000/api/category/getfull")
+      .get("/api/category/getfull")
       .then((res) => setCategory(res.data.category));
   };
 
@@ -99,7 +99,7 @@ const AddProductModel = () => {
       alert("please fill all the filleds");
     }
     axios
-      .post("http://localhost:5000/api/products", {
+      .post("/api/products", {
         name: title,
         desc: description,
         price: cost,

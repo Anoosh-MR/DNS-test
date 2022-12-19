@@ -23,14 +23,12 @@ const Home = () => {
   // frtching categories
   const fetchCategories = () => {
     axios
-      .get("http://localhost:5000/api/category")
+      .get("/api/category")
       .then(({ data }) => setCategory(data))
       .catch((err) => console.log(err));
   };
   const fullProducts = () => {
-    axios
-      .post("http://localhost:5000/api/products/getPost")
-      .then(({ data }) => setProducts(data));
+    axios.post("/api/products/getPost").then(({ data }) => setProducts(data));
   };
 
   const handleClick = (data, id, name) => {

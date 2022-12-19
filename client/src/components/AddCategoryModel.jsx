@@ -58,14 +58,14 @@ const AddCategoryModel = () => {
 
   const getFullCategory = () => {
     axios
-      .get("http://localhost:5000/api/category/getfull")
+      .get("/api/category/getfull")
       .then((res) => setCategory(res.data.category));
   };
 
   //   create a category
   const handleSave = async () => {
     await axios
-      .post("http://localhost:5000/api/category/", {
+      .post("/api/category/", {
         name: InputCat,
         parentId: select,
       })
